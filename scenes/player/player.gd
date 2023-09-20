@@ -38,6 +38,8 @@ func shoot_laser():
 	var pos = selected_marker.global_position
 	var dir = (get_global_mouse_position() - position).normalized()
 	
+	$GPUParticles2D.emitting = true
+	
 	laser.emit(pos, dir)
 
 func shoot_grenade():
